@@ -55,7 +55,7 @@ async def calculate_total_revenue(property_id: str, tenant_id: str) -> Dict[str,
                         COUNT(*) as reservation_count
                     FROM reservations 
                     WHERE property_id = :property_id AND tenant_id = :tenant_id
-                    GROUP BY property_id
+                    GROUP BY property_id , tenant_id
                 """)
                 
                 result = await session.execute(query, {

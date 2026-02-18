@@ -20,6 +20,7 @@ async def get_dashboard_summary(
     return {
         "property_id": revenue_data['property_id'],
         "total_revenue": total_revenue_float,
+        "current_user": current_user,
         "currency": revenue_data['currency'],
         "reservations_count": revenue_data['count']
     }
